@@ -1,23 +1,23 @@
 package SnakeGame;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
 public class SnakeGameFrame {
-
 	static JFrame frame = new JFrame("Snake Game");
-	static SnakeGamePanel panel = new SnakeGamePanel();
-
+	static int width = 706;
+	static int height = 629;
+	
 	public static void main(String[] args) {
 		initFrame();
 	}
-
+	
 	public static void initFrame() {
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(806, 829);
+		frame.setDefaultCloseOperation(3);
+		frame.setSize(width, height);
 		frame.setResizable(false);
-		frame.add(panel);
 		
+		SnakeGamePanel panel = new SnakeGamePanel();
+		frame.getContentPane().add(panel);
 		frame.setVisible(true);
-		
 	}
 }
